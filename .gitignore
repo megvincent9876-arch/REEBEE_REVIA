@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env
+server/reebee_revia.db
+server/reebee_revia copy.db
+server/uploads copy/

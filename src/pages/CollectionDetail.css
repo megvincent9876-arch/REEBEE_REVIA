@@ -1,0 +1,145 @@
+.collection-detail-page {
+  min-height: 100vh;
+  background: #1d0d24;
+  color: #f6efe8;
+  padding: 110px 7%;
+}
+
+.collection-detail-header {
+  max-width: 1000px;
+  margin-bottom: 120px;
+}
+
+.collection-detail-header > p:first-child {
+  margin: 0 0 38px;
+  color: #c9ad82;
+  font-size: 10px;
+  letter-spacing: 5px;
+}
+
+.collection-detail-header h1 {
+  margin: 0 0 40px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(65px, 9vw, 145px);
+  font-weight: normal;
+  line-height: 0.84;
+  letter-spacing: -3px;
+}
+
+.collection-detail-header .description {
+  max-width: 560px;
+  margin: 0;
+  color: #d8cbc1;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 120px 45px;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  height: auto;
+  height: auto;
+  overflow: hidden;
+  background: #291331;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 1s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.035);
+}
+
+.product-info {
+  padding: 30px 4px 0;
+}
+.product-info {
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-info {
+  transform: translateY(-4px);
+}
+
+.product-info h2 {
+  margin: 0 0 13px;
+  color: #f6efe8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 31px;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+}
+
+.product-info p {
+  max-width: 500px;
+  margin: 0;
+  color: #bfaeaa;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.product-price {
+  margin-top: 20px !important;
+  color: #c9ad82 !important;
+  font-size: 14px !important;
+  letter-spacing: 2px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 120px;
+  color: #c9ad82;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 3px;
+  border-bottom: 1px solid rgba(201, 173, 130, 0.5);
+  padding-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.back-link:hover {
+  color: #f6efe8;
+  border-color: #f6efe8;
+}
+
+@media (max-width: 700px) {
+  .collection-detail-page {
+    padding: 75px 25px;
+  }
+
+  .collection-detail-header {
+    margin-bottom: 75px;
+  }
+
+  .collection-detail-header h1 {
+    font-size: 65px;
+    letter-spacing: -2px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .product-image {
+    height: 560px;
+  }
+
+  .product-info {
+    padding-top: 25px;
+  }
+}
