@@ -84,7 +84,7 @@ function CollectionDetail() {
                   src={
                     product.image.startsWith("http")
                       ? product.image
-                      : `https://reebee-revia-api.megvincent9876.workers.dev${product.image}`
+                      : `https://reebee-revia.onrender.com${product.image}`
                   }
                   alt={product.name}
                 />
