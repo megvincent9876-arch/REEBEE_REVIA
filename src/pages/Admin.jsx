@@ -18,7 +18,7 @@ const emptyForm = {
 
   const loadProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/products");
+      const response = await fetch("https://reebee-revia-api.megvincent9876.workers.dev");
 
       if (!response.ok) {
         throw new Error("Could not load products.");
@@ -61,7 +61,7 @@ const emptyForm = {
     try {
       if (editingId) {
         const response = await fetch(
-          `http://localhost:5000/api/products/${editingId}`,
+          `https://reebee-revia-api.megvincent9876.workers.dev${editingId}`,
           {
             method: "PUT",
             headers: {
@@ -106,7 +106,7 @@ const emptyForm = {
         formData.append("image", form.image);
 
         const response = await fetch(
-          "http://localhost:5000/api/products",
+          "https://reebee-revia-api.megvincent9876.workers.dev/api/products",
           {
             method: "POST",
             body: formData,
@@ -164,7 +164,7 @@ colors: product.colors || "",
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`,
+        `https://reebee-revia-api.megvincent9876.workers.dev/api/products/${id}`,
         {
           method: "DELETE",
         }
@@ -191,7 +191,7 @@ colors: product.colors || "",
 
     return image.startsWith("http")
       ? image
-      : `http://localhost:5000${image}`;
+      : `https://reebee-revia-api.megvincent9876.workers.dev${image}`;
   };
 
   return (

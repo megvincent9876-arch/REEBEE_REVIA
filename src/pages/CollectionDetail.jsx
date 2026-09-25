@@ -24,7 +24,7 @@ function CollectionDetail() {
     collectionNames[id] || "Nigerian Native Wear";
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+   fetch("https://reebee-revia-api.megvincent9876.workers.dev/api/products")
       .then((response) => response.json())
       .then((data) => {
         const filteredProducts = data.filter(
@@ -84,7 +84,7 @@ function CollectionDetail() {
                   src={
                     product.image.startsWith("http")
                       ? product.image
-                      : `http://localhost:5000${product.image}`
+                      : `https://reebee-revia-api.megvincent9876.workers.dev${product.image}`
                   }
                   alt={product.name}
                 />
