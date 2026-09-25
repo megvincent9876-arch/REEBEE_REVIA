@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./CartContext";
 import AppHome from "./AppHome";
 import Collections from "./pages/collections";
@@ -10,7 +10,7 @@ import Checkout from "./pages/Checkout";
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<AppHome />} />
           <Route path="/collections" element={<Collections />} />
@@ -22,7 +22,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </CartProvider>
   );
 }
