@@ -18,7 +18,7 @@ const emptyForm = {
 
   const loadProducts = async () => {
     try {
-      const response = await fetch("https://reebee-revia-api.megvincent9876.workers.dev");
+      const response = await fetch("https://reebee-revia-api.megvincent9876.workers.dev/api/products");
 
       if (!response.ok) {
         throw new Error("Could not load products.");
@@ -191,7 +191,7 @@ colors: product.colors || "",
 
     return image.startsWith("http")
       ? image
-      : `https://reebee-revia-api.megvincent9876.workers.dev${image}`;
+      : `https://reebee-revia.onrender.com${image}`;
   };
 
   return (
