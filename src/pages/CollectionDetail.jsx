@@ -51,7 +51,7 @@ function CollectionDetail() {
 
   addToCart(product, size, color);
 
-  alert(`${product.name} has been added to your cart.`);
+  alert(`${product.name} has been added to your cart!`);
 };
 
   return (
